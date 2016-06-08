@@ -1,9 +1,51 @@
 module UsersHelper
-  def user_cover(user)
-    if user.cover.url
-      "background-image: url(#{ user.cover.url})"
+
+  def user_cover(user, type="back")
+    if user
+      if user.cover.url
+        name = user.cover.url
+      else
+        index = user.username.to_s.hash % 4
+        name = "background_#{index}.jpg"
+      end
     else
-      "background: #ccc"
+      name = "background_0.jpg"
+    end
+    puts name
+
+    case type
+      when "name"
+        name
+      when "url"
+        asset_path(name)
+      when "back"
+        "background-image: url(#{ asset_path(name)})"
+      else
+        name
+    end
+  end
+
+  def user_avatar(user, type="name")
+    puts user
+    if user
+      if user.avatar.url
+        name = user.avatar.url
+      else
+        index = user.username.to_s.hash % 19
+        name = "avatar_#{index}.jpg"
+      end
+    else
+      name = "avatar_0.jpg"
+    end
+    puts name
+
+    case type
+      when "name"
+        name
+      when "url"
+        asset_path(name)
+      else
+        name
     end
   end
 

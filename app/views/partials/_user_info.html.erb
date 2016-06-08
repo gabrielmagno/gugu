@@ -1,6 +1,6 @@
 <div class="card">
-  <div class="cover" data-cover="<%= user.cover %>">
-    <%= image_tag user.avatar, class: "avatar" %>
+  <div class="cover" data-cover="<%= user_cover(user, "url") %>">
+    <%= render 'partials/avatar', user: user, klass: 'avatar' %>
   </div>
   <div class="about">
     <h3 class="name"><%= user.name %></h3>
@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-lg-4 text-center">
             <%= link_to user_path(user) do %>
-              <h5><b>Tweets</b></h5>
+              <h5><b>Gugus</b></h5>
               <h4 id="tweets-count"><%= user.tweets_count %></h4>
             <% end %>
           </div>

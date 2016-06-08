@@ -1,6 +1,6 @@
 <%= form_tag tweets_path(parent_id: tweet_id), multipart: true, method: :post, remote: true do %>
   <div class="form-group">
-    <%= text_area_tag "tweet[tweet_text]", nil, class: "form-control", placeholder: "Enter Tweet 140 characters" %>
+    <%= text_area_tag "tweet[tweet_text]", nil, class: "form-control", placeholder: "Enter Gugu 4 characters" %>
   </div>
   <div class="form-group hidden">
     <img id="tweet-img-preview">
@@ -12,10 +12,10 @@
   <div class="form-group">
     <%= file_field_tag "tweet[media]", class: "hidden", id: "media-upload-btn" %>
     <%= button_tag id: "tweet", class: "btn btn-primary" do %>
-      <%= fa_icon "paper-plane" %> Tweet
+      <%= fa_icon "paper-plane" %> Gugu
     <% end %>
     <div class="pull-right">
-      <span id="tweet-count">140</span>
+      <span id="tweet-count">4</span>
       <a id="ps-media-upload-btn" href="javascript:void(0);" class="btn btn-default">
         <i class="fa fa-camera"></i>
       </a>

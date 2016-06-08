@@ -56,6 +56,8 @@ gem 'remotipart', '~> 1.2'
 gem 'counter_culture', '~> 0.1.23'
 gem 'rails_autolink'
 
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

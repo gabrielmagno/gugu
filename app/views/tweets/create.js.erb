@@ -1,8 +1,8 @@
 <% if @tweet.save %>
   $("#tweet_tweet_text").val("");
   $("#feed").prepend("<%=j render @tweet %>");
- 	$('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Tweet posted successfully to your timeline' %>");
-  $('#tweet-count').text('140');
+ 	$('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Gugu posted successfully to your timeline' %>");
+  $('#tweet-count').text('4');
  	$("#new-tweet-modal").modal('hide');
  	$('#tweets-count').html("<%= current_user.reload.tweets_count %>");
 <% else %>

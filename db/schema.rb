@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20150315004657) do
   add_index "retweets", ["source_tweet_id", "retweeter_id"], name: "index_retweets_on_source_tweet_id_and_retweeter_id"
 
   create_table "tweets", force: true do |t|
-    t.string   "tweet_text", limit: 140
+    t.string   "tweet_text", limit: 4
     t.string   "location"
     t.integer  "user_id"
     t.datetime "created_at"

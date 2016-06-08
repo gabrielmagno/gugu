@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Twitter Clone", root_url, class: "navbar-brand" %>
+      <%= link_to "Gugu", root_url, class: "navbar-brand" %>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -19,7 +19,7 @@
           </form>
           <li>
             <a href="#", class="profile-image dropdown-toggle" data-toggle="dropdown", role="button", aria-expanded="false">
-              <%= image_tag current_user.avatar, class: "avatar-xs" %>
+              <%= image_tag user_avatar(current_user), class: "avatar-xs" %>
             </a>
             <ul class="dropdown-menu" role="menu">
               <li><%= link_to "#{current_user.name}<br><b>@#{current_user.username}</b>".html_safe, user_path(current_user) %></li>
@@ -30,7 +30,7 @@
             </ul>
           </li>
           <form class="navbar-form navbar-right">
-            <button id="new-tweet" type="button" data-toggle="modal" data-target="#new-tweet-modal" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Tweet</button>
+            <button id="new-tweet" type="button" data-toggle="modal" data-target="#new-tweet-modal" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Gugu</button>
           </form>
         <% end %>
       </ul>

@@ -35,7 +35,7 @@ $(document).ready(function(){
 	$('#tweet_tweet_text').keyup(function(){
     console.log('hello world');
 		var len = $(this).val().length;
-    $('#tweet-count').text(140 - len);
+    $('#tweet-count').text(4 - len);
 	});
 
 });

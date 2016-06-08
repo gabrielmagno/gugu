@@ -1,7 +1,7 @@
 <% if @tweet.destroy %>
   $("#tweet-<%= @tweet_id %>").remove();
   $('#tweets-count').html("<%= current_user.reload.tweets_count %>");
-  $('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Tweet deleted successfully' %>");
+  $('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Gugu deleted successfully' %>");
 <% else %>
-  $('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Tweet deletion failed. Try again later' %>");
+  $('#tweet-error').html("<%=j render 'partials/error_message', error_message: 'Gugu deletion failed. Try again later' %>");
 <% end %>
