@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 module UsersHelper
 
   def user_cover(user, type="back")
@@ -5,7 +7,7 @@ module UsersHelper
       if user.cover.url
         name = user.cover.url
       else
-        index = user.username.to_s.hash % 4
+        index = Digest::MD5.hexdigest(user.username.to_s).to_i(16) % 4
         name = "background_#{index}.jpg"
       end
     else
@@ -31,7 +33,7 @@ module UsersHelper
       if user.avatar.url
         name = user.avatar.url
       else
-        index = user.username.to_s.hash % 19
+        index = Digest::MD5.hexdigest(user.username.to_s).to_i(16) % 19
         name = "avatar_#{index}.jpg"
       end
     else
