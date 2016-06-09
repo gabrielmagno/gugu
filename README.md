@@ -5,4 +5,4 @@ http://gu-gu.herokuapp.com/
 
 ![gugu](http://i.imgur.com/yhRVusQ.png)
 
-Based on https://github.com/sudharti/twitter-clone .
+Baseado no https://github.com/sudharti/twitter-clone .
