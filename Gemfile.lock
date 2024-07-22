@@ -42,7 +42,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bootstrap-sass (3.2.0.2)
+    bootstrap-sass (3.2.0.4)
       sass (~> 3.2)
     builder (3.2.2)
     carrierwave (0.10.0)
@@ -227,7 +227,7 @@ DEPENDENCIES
   autoprefixer-rails
   backstretch-rails
   better_errors
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass (~> 3.2.0.4)
   carrierwave
   counter_culture (~> 0.1.23)
   devise
